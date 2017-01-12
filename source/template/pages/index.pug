@@ -1,0 +1,50 @@
+extends ../_template
+
+block variables
+	- var title = 'Каталог'
+
+block content
+	.content-wrapper
+		.container
+			.main-title Каталог
+			.main-content
+
+				include ../common/_sidebar
+
+				.content
+					.sort
+						.sort__left
+							.sort__title Сортировать по:
+								ul.sort__list
+									- var items = ['Цене', 'Популярности', 'Названию']
+									each item in items
+										li.sort__item
+											a(href="#").sort__link
+												span.sort__text= item
+												i.icon.icon-red-arrow-down
+						.sort__right
+							.sort__title Показывать по:
+								ul.sort__list
+									- var items = [20, 40, 60, 80]
+									each item in items
+										li.sort__item
+											a(href="#").sort__link
+												span.sort__amount= item
+							.sort__view
+								ul.sort__view-list
+									- var items = ['thumb', 'list']
+									each item in items
+										li(class="sort__view-item sort__view-" + item data-view= item)
+											a(href="#").sort__view-link
+												i(class="icon icon-view-" + item)
+					.products
+						ul.products__list
+							- for (var i = 0; i < 20; i++)
+								li.products__item
+									a(href="#").products__link
+										.products__item-inner
+											img(src="assets/img/product.jpg").products__img
+											.products__brand Jour D'hermes
+											.products__name Kelly Calèche
+											.products__price 1 680 руб.
+											a(href="#").products__button В корзину

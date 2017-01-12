@@ -1,0 +1,32 @@
+header.header
+	.header__top
+		.container
+			.header__left
+				- var items = {'delivery' : 'Доставка', 'payment' : 'Оплата', 'guarantee' : 'Гарантия'}
+				ul.menu
+					each item, icon in items
+						li.menu__item
+							i(class="icon icon-" + icon)
+							a(href="#").menu__link= item
+
+			.header__right
+				.header__phones
+					i.icon.icon-phone
+					a(href="tel:84952260124").phone 8(495) 226-01-24 
+					a(href="tel:89055560538").phone 8(905) 556-05-38 
+				.header__login
+					i.icon.icon-login
+					a(href="#").login Войти						
+						 
+	.header__bottom
+		.container
+			a(href="#").logo
+				img(src="assets/img/logo.png" alt="Орабэль лого").logo__pic
+				.logo__text Орабэль
+			.search
+				form.search__form
+					input(name="" type="text" placeholder="Поиск").search__form-input
+					input(name="" type="submit").search__form-submit
+			.cart
+				i.icon.icon-cart
+				.cart__text В корзине нет добавленных товаров
