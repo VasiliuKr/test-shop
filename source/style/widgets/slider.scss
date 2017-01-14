@@ -1,0 +1,20 @@
+.ui-slider-horizontal {
+	height: 2px;
+	background: #ddd !important;
+}
+.ui-widget.ui-widget-content {
+	border: none;
+}
+.ui-widget-header {
+	background: $main-color !important;
+}
+.ui-slider-handle {
+	background: $main-color !important;
+	width: 8px !important;
+	height: 8px !important;
+	border-radius: 50%;
+	border: none !important;
+	outline: none !important;
+	top: -3px !important;
+	cursor: pointer !important;
+}

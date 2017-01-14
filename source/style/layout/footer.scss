@@ -3,4 +3,76 @@
 	margin-top: -370px;
 	position: relative;
 	background-color: #e6e6e6;
+	.container {
+		padding-top: 40px;
+	}
+}
+.contacts {
+	width: 370px;
+	float: left;
+}
+.contacts__question {
+	font-size: 13px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.contacts__phone {
+	font: 700 20px 'Gotham Pro';
+	margin-bottom: 30px;
+}
+.contacts__title {
+	font: 500 16px 'Gotham Pro';
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+.contacts__schedule {
+	margin-bottom: 15px;
+}
+.socials {
+	margin-bottom: 35px;
+}
+.socials__item {
+	display: inline-block;
+	margin-right: 10px;
+}
+.socials__link {
+	&:hover {
+		.icon-vk {
+			background-position: -141px 0px;
+		}
+		.icon-fb {
+			background-position: -38px -64px;
+		}
+		.icon-tw {
+			background-position: -103px -37px;
+		}
+		.icon-ok {
+			background-position: -37px -101px;
+		}
+	}
+}
+
+.footer__nav-wrapper {
+	width: 770px;
+	float: right;
+	@extend %clearfix;
+}
+.footer__nav {
+	float: right;
+	margin-left: 100px;
+}
+.footer__nav-title {
+	font: 500 16px 'Gotham Pro';
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.footer__nav-item {
+	margin-bottom: 10px;
+}
+.footer__nav-link {
+	text-transform: uppercase;
+	transition: 0.3s;
+	&:hover {
+		color: $main-color;
+	}
 }

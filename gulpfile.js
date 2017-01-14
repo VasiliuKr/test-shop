@@ -6,6 +6,7 @@ global.$ = {
   path: {
     task: require('./gulp/paths/tasks.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
+    jsJqueryUI: require('./gulp/paths/js.jquery-ui.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
     app: require('./gulp/paths/app.js')
   },
@@ -25,6 +26,7 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js:foundation',
+    'js:jquery-ui',
     'js:process',
     'copy:image',
     'copy:fonts',

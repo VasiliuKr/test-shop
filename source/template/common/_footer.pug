@@ -1,1 +1,42 @@
 footer.footer
+	.container
+		.contacts
+			.contacts__question Есть вопросы? Позвоните
+			.contacts__phone 8 (495) 226-01-24
+			.contacts__title Контактная информация
+			.contacts__schedule
+				.contacts__schedule-text Ежедневно с 09 до 21:00
+				.contacts__schedule-text Без выходных
+			ul.socials
+				- var items = ['vk', 'fb', 'tw', 'ok']
+				each item in items
+					li.socials__item
+						a(href="#").socials__link
+							i(class="icon icon-" + item)
+			.copyright
+				.copyright__text © Орабэль, 2010–2016
+				.copyright__text Эксклюзивная, нишевая и селективная парфюмерия
+		.footer__nav-wrapper
+			.footer__nav
+				.footer__nav-title Сервис и помощь
+				ul.footer__nav-list
+					- var items = ['Способ доставки', 'Способ оплаты', 'Возврат', 'Публичная оферта']
+						each item in items
+							li.footer__nav-item
+								a(href="#" class="footer__nav-link")= item
+			.footer__nav
+				.footer__nav-title О компании
+				ul.footer__nav-list
+					- var items = ['О компании', 'Скидки', 'Статьи', 'Сертификаты', 'Контакты']
+						each item in items
+							li.footer__nav-item
+								a(href="#" class="footer__nav-link")= item
+			.footer__nav
+				.footer__nav-title Меню
+				ul.footer__nav-list
+					- var items = ['Для женщин', 'Для мужчин', 'Подарочные наборы', 'Косметика', 'Духи с феромонами', 'Для дома', 'Распродажа']
+						each item in items
+							li.footer__nav-item
+								a(href="#" class="footer__nav-link")= item
+			
+			

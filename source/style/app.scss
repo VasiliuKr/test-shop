@@ -17,6 +17,12 @@ html, body {
 }
 body {
   margin: 0;
+  font: 400 12px 'Open Sans';
+  color: #313131;
+}
+ul {
+	margin: 0;
+	padding: 0;
 }
 .wrapper {
 	min-height: 100%;
@@ -26,9 +32,19 @@ body {
 .empty {
 	height: 370px;
 }
+.container {
+	width: 1140px;
+	margin: 0 auto;
+	@extend %clearfix;
+}
 
 @import "layout/header";
 @import "layout/nav";
+@import "layout/breadcrumbs";
+@import "layout/sidebar";
 @import "layout/footer";
+@import "plugins/jquery-ui";
+@import "widgets/slider";
+@import "pages/index";
 @import "common/fonts";
 @import "common/sprite";

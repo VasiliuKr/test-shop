@@ -1,0 +1,19 @@
+.breadcrumbs {
+	background-color: #f7f6f6;
+	color: #313131;
+	font-size: 11px;
+	height: 50px;
+}
+.breadcrumbs__list {
+	margin-top: 15px;
+}
+.breadcrumbs__item {
+	display: inline-block;
+}
+.breadcrumbs__item_active {
+	color: #888888;
+}
+.breadcrumbs__link,
+.breadcrumbs__pipe {
+	padding-right: 5px;
+}

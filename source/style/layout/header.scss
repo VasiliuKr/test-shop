@@ -1,0 +1,121 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.header__top {
+	background-color: #fafafa;
+	height: 40px;
+	font-size: 11px;
+	color: #888888;
+	.icon {
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}
+.header__left {
+	width: 570px;
+	float: left;
+}
+.header__right {
+	width: 570px;
+	float: right;
+}
+
+.menu__item {
+	display: inline-block;
+	margin-right: 30px;
+	padding-top: 8px;
+	text-transform: uppercase;
+	.menu__link {
+		vertical-align: middle;
+		transition: 0.3s;
+		&:hover {
+			color: $main-color;
+		}
+	}
+}
+.header__right {
+	padding-top: 8px;
+	.login,.phone {
+		vertical-align: middle;
+		transition: 0.3s;
+		&:hover {
+			color: $main-color;
+		}
+	}
+	.phone {
+		margin-right: 20px;
+	}
+}
+.header__login {
+	float: right;
+	margin-left: 170px;
+}
+.header__phones {
+	float: right;
+}
+.header__bottom {
+	height: 110px;
+	position: relative;
+	.container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+.logo {
+	float: left;
+	margin-right: 100px;
+}
+.logo__pic {
+	vertical-align: middle;
+	margin-right: 25px;
+}
+.logo__text {
+	letter-spacing: 5px;
+	font: 500 28px 'Gotham Pro';
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+.search {
+	@extend %clearfix;
+	float: left;
+	margin-top: 10px;
+}
+.search__form {
+	width: 416px;
+	height: 40px;
+	border: solid 1px #cfcfcf;
+}
+.search__form-input {
+	border: none;
+	outline: none;
+	height: 38px;
+	width: 375px;
+	font-style: italic;
+	padding-left: 17px;
+	padding-right: 17px;
+	color: #cfcfcf;
+}
+.search__form-submit {
+	background-image: url("../img/sprite.png");
+	background-position: -141px -122px;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	vertical-align: middle;
+}
+.cart {
+	float: right;
+	padding-top: 8px;
+	.icon {
+		margin-right: 15px;
+	}
+}
+.cart__text {
+	width: 150px;
+	display: inline-block;
+}

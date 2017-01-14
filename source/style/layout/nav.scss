@@ -1,0 +1,22 @@
+.nav {
+	background-color: #fafafa;
+	height: 60px;
+	font: 400 12px 'Gotham Pro';
+	text-transform: uppercase;
+	.container {
+		display: table;
+	}	
+}
+.nav__link {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 60px;
+	transition: 0.3s;
+	&:hover {
+		color: $main-color;
+	}
+}
+.nav__link_active {
+	
+}

@@ -1,0 +1,183 @@
+.content-wrapper {
+	background-color: #f7f6f6;
+}
+.main-title {
+	font: 500 24px "Gotham Pro";
+	margin-bottom: 30px;
+}
+.main-content {
+	@extend %clearfix;
+}
+.content {
+	width: 920px;
+	float: right;
+	padding: 0 10px;
+}
+
+/*--------- Sort block ----------*/
+
+.sort {
+	line-height: 38px;
+	@extend %clearfix;
+}
+.sort__left {
+	@extend %clearfix;
+	float: left;
+	.sort__item {
+		padding: 0 10px;
+	}
+}
+.sort__title {
+	float: left;
+	margin-right: 10px;
+}
+.sort__list {
+	float: left;
+}
+.sort__item {
+	display: inline-block;
+}
+
+.sort__text {
+	margin-right: 8px;
+	border-bottom: 1px dotted #313131;
+}
+.sort__right {
+	float: right;
+	.sort__item {
+		padding: 0 7px;
+	}
+	.sort__link {
+		padding: 5px;
+		transition: 0.3s;
+		&:hover {
+			background-color: $main-color;
+			.sort__amount {
+				color: #fff;
+			}
+		}
+	}
+	.sort__link_active {
+		background-color: $main-color;
+		.sort__amount {
+			color: #fff;
+		}
+	}
+}
+.sort__view {
+	float: right;
+	margin-left: 40px;
+}
+.sort__view-item {
+	margin-left: 25px;
+}
+.sort__view-item {
+	display: inline-block;
+}
+.sort__view-link {
+	vertical-align: middle;
+}
+.sort__view-link_active {
+	.icon-view-thumb {
+		background-position: -84px -42px;
+	}
+	.icon-view-list {
+		background-position: -123px -74px;
+	}
+}
+
+/*---------Products block------------*/
+
+.products {
+	padding: 15px 0;
+}
+.products__list {
+	text-align: justify;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}
+.products__item {
+	display: inline-block;
+	width: 220px;
+	height: 350px;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+.products__link {
+	display: block;
+	height: 100%;
+	padding: 8px;
+}
+.products__item-inner {
+	height: 100%;
+	border: 1px solid $main-color;
+	text-align: center;
+}
+.products__img-wrapper {
+	height: 200px;
+	position: relative;
+}
+.products__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.products__name {
+	font-size: 11px;
+	margin-bottom: 20px;
+}
+.products__price {
+	font: 500 18px 'Gotham Pro';
+	color: $main-color;
+	margin-bottom: 20px;
+}
+.products__price-currency {
+	font: 400 12px 'Gotham Pro';
+}
+.products__button {
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	background-color: $main-color;
+	border: none;
+	outline: none;
+	padding: 7px 40px;
+	cursor: pointer;
+}
+
+/*---------Pagination----------*/
+
+.pagination {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.pagination__item {
+	display: inline-block;
+	margin-right: 5px;
+}
+.pagination__link {
+	&:hover .pagination__mark {
+		background-color: $main-color;
+	}
+}
+.pagination__item_next {
+	.icon-arrow-down {
+		transform: rotate(270deg);
+	}
+}
+.pagination__mark {
+	padding: 3px 8px;
+	transition: 0.3s;
+}
+.pagination__link_active {
+	.pagination__mark {
+		background-color: $main-color;
+	}
+}
+.pagination__mark_text {
+	margin-right: 7px;
+}

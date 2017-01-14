@@ -1,53 +1,48 @@
-.filter
-	ul.filter__list
-		li.filter__item
-			.filter__title Фильтр
-			.filter__content
-				ul.filter__choose
-					- var items = ['Для женщин', 'Для мужчин', 'Подарочные наборы', 'Косметика', 'Духи с феромонами', 'Скидки']
-					each item in items
-						li.filter__choose-item
-							label.filter__choose-label
-								input(name="" type="checkbox").filter__choose-input
-								.filter__choose-elem
-								.filter__choose-text= item
-		li.filter__item
-			.filter__title Цена
-			.filter__content
-				.filter__slider
-					.filter__slider-element
-					.filter__slider-displays
-						.filter__slider-left
-							.filter__slider-text От
-							input(name="" type="text" placeholder="0").filter__slider-input.filter__slider-input_from
-						.filter__slider-right
-							.filter__slider-text до
-							input(name="" type="text" placeholder="150 000").filter__slider-input.filter__slider-input_to
-		li.filter__item
-			.filter__title Аромат
-			.filter__content
-				ul.filter__choose
-					- var items = ['Пряный', 'Свежий', 'Цитрус', 'Специи', 'Цветочный', 'Фруктовый']
-					each item in items
-						li.filter__choose-item
-							label.filter__choose-label
-								input(name="" type="checkbox").filter__choose-input
-								.filter__choose-elem
-								.filter__choose-text= item
-				a(href="#").filter__more
-					span.filter__more-text Все ароматы
-					i.icon.icon-arrow-down
-		li.filter__item
-			.filter__title Бренд
-			.filter__content
-				ul.filter__choose
-					- var items = ['Acca Cappa', 'Baldi', 'Celine Dion', 'Dolce & Gabbana', 'Fendi', 'Hugo Boss']
-					each item in items
-						li.filter__choose-item
-							label.filter__choose-label
-								input(name="" type="checkbox").filter__choose-input
-								.filter__choose-elem
-								.filter__choose-text= item
-				a(href="#").filter__more
-					span.filter__more-text Все бренды
-					i.icon.icon-arrow-down
+.sidebar
+	.filter
+		ul.filter__list
+			li.filter__item.filter__item_highlighted
+				.filter__title Фильтр
+				.filter__content
+					ul.filter__choose
+						- var items = ['Для женщин', 'Для мужчин', 'Подарочные наборы', 'Косметика', 'Духи с феромонами', 'Скидки']
+						each item, index in items
+							li.filter__choose-item
+								input(name="" type="checkbox" id="checkbox_" + (index+1)).filter__choose-input
+								label(for="checkbox_" + (index+1)).filter__choose-label= item									
+			li.filter__item
+				.filter__title Цена
+				.filter__content
+					.filter__slider
+						.filter__slider-element
+						.filter__slider-displays
+							.filter__slider-left
+								span.filter__slider-text От 
+								input(name="" type="text" placeholder="0").filter__slider-input.filter__slider-input_from
+							.filter__slider-right
+								span.filter__slider-text до 
+								input(name="" type="text" placeholder="150 000").filter__slider-input.filter__slider-input_to
+			li.filter__item
+				.filter__title Аромат
+				.filter__content
+					ul.filter__choose
+						- var items = ['Пряный', 'Свежий', 'Цитрус', 'Специи', 'Цветочный', 'Фруктовый']
+						each item, index in items
+							li.filter__choose-item
+								input(name="" type="checkbox" id="checkbox_" + (index+7)).filter__choose-input
+								label(for="checkbox_" + (index+7)).filter__choose-label= item
+					a(href="#").filter__more
+						span.filter__more-text Все ароматы
+						i.icon.icon-arrow-down
+			li.filter__item
+				.filter__title Бренд
+				.filter__content
+					ul.filter__choose
+						- var items = ['Acca Cappa', 'Baldi', 'Celine Dion', 'Dolce & Gabbana', 'Fendi', 'Hugo Boss']
+						each item, index in items
+							li.filter__choose-item
+								input(name="" type="checkbox" id="checkbox_" + (index+13)).filter__choose-input
+								label(for="checkbox_" + (index+13)).filter__choose-label= item
+					a(href="#").filter__more
+						span.filter__more-text Все бренды
+						i.icon.icon-arrow-down

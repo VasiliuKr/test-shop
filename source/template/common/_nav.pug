@@ -2,4 +2,4 @@ nav.nav
 	.container
 		- var items = ['Для женщин', 'Для мужчин', 'Подарочные наборы', 'Косметика', 'Духи с феромонами', 'Для дома', 'Распродажа']
 			each item in items
-				a(href="#" class="nav__link nav__link_" + ((item == "Распродажа") ? 'active' : ''))= item
+				a(href="#" class="nav__link" + ((item == "Распродажа") ? ' nav__link_active' : ''))= item
