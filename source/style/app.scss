@@ -37,14 +37,44 @@ ul {
 	margin: 0 auto;
 	@extend %clearfix;
 }
+.block-title {
+	font: 500 18px 'Gotham Pro';
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	margin-bottom: 60px;
+	&:after {
+		position: absolute;
+		content: "";
+		height: 1px;
+		background-color: #313131;
+		width: 190px;
+		top: 47%;
+		margin-left: 25px;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		height: 1px;
+		background-color: #313131;
+		width: 190px;
+		top: 47%;
+		margin-left: -215px;
+	}
+}
 
 @import "layout/header";
 @import "layout/nav";
 @import "layout/breadcrumbs";
 @import "layout/sidebar";
+@import "layout/aboutcompany";
+@import "layout/articles";
 @import "layout/footer";
 @import "plugins/jquery-ui";
+@import "plugins/fancybox";
 @import "widgets/slider";
+@import "widgets/tabs";
 @import "pages/index";
+@import "pages/product";
 @import "common/fonts";
 @import "common/sprite";

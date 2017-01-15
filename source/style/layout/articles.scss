@@ -1,0 +1,82 @@
+.articles__list {
+	text-align: justify;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}
+.articles__item {
+	display: inline-block;
+	width: 365px;
+	background-color: #fff;
+	vertical-align: top;
+}
+.article {
+	padding: 22px 18px 15px 18px;
+	text-align: right;
+}
+.article__header {
+	@extend %clearfix;
+	display: table;
+	margin-bottom: 20px;
+}
+.article__date {
+	width: 60px;
+	height: 60px;
+	background-color: $main-color;
+	color: #fff;
+	text-align: center;
+	padding-top: 14px;
+	margin-right: 25px;
+}
+.article__title {
+	
+}
+.article__day {
+	font: 500 24px 'Gotham Pro';
+	line-height: 20px;
+}
+.article__month {
+	font: 400 12px 'Gotham Pro';
+}
+.article__title {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+}
+.article__img-wrapper {
+	height: 140px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.article__img {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: -25px;
+}
+.article__text {
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 35px;
+}
+.article__link {
+	font-size: 14px;
+	color: #888;
+	transition: 0.3s;
+	&:hover {
+		color: $main-color;
+	}
+	.icon-arrow-down {
+		transform: rotate(270deg);
+	}
+}
+.article__link-text {
+	border-bottom: 1px dotted #888;
+	margin-right: 12px;
+}

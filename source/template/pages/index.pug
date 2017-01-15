@@ -4,6 +4,15 @@ block variables
 	- var title = 'Каталог'
 
 block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				- var items = ["Главная", "Каталог"]
+					each item, index in items
+						li(class="breadcrumbs__item breadcrumbs__item_" + ((item == "Каталог") ? 'active' : ''))
+							a(href="#").breadcrumbs__link= item
+							if index != items.length-1
+								span.breadcrumbs__pipe   >  
 	.content-wrapper
 		.container
 			.main-title Каталог
@@ -41,7 +50,7 @@ block content
 						ul.products__list
 							- for (var i = 0; i < 20; i++)
 								li.products__item
-									a(href="#").products__link
+									a(href="product.html").products__link
 										.products__item-inner
 											.products__img-wrapper
 												img(src="assets/img/product.jpg").products__img
@@ -60,3 +69,6 @@ block content
 								a(href="#").pagination__link
 									span.pagination__mark_text Следующая
 									i.icon.icon-arrow-down
+
+			include ../common/_aboutcompany
+			include ../common/_articles

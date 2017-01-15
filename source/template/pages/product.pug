@@ -1,0 +1,83 @@
+extends ../_template
+
+block variables
+	- var title = 'Jour d’Hermes'
+
+block scripts
+	script(src='/assets/js/jquery.fancybox.js' defer)
+	script(src='/assets/js/fancybox.js' defer)
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				- var items = ["Главная", "Каталог", "Jour d’Hermes"]
+					each item, index in items
+						li(class="breadcrumbs__item breadcrumbs__item_" + ((item == "Jour d’Hermes") ? 'active' : ''))
+							a(href="#").breadcrumbs__link= item
+							if index != items.length-1
+								span.breadcrumbs__pipe   >  
+	.content-wrapper
+		.container
+			.main-title Jour d’Hermes
+			.main-content
+				.product-card
+					.column.column_left
+						.product-card__image
+							.product-card__image-inner
+								img(src="assets/img/product_large.jpg").product-card__pic
+						ul.gallery__list
+							li.gallery__item
+								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+									.transparent-layer
+										.icon-search
+									img(src="assets/img/product_small.jpg").fancybox__small
+							li.gallery__item
+								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+									.transparent-layer
+										.icon-search
+									img(src="assets/img/product_small.jpg").fancybox__small
+							li.gallery__item
+								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+									.transparent-layer
+										.icon-search
+									img(src="assets/img/product_small.jpg").fancybox__small
+							li.gallery__item
+								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+									.transparent-layer
+										.icon-search
+									img(src="assets/img/product_small.jpg").fancybox__small
+					.column.column_right
+						.product-card__info
+							.product-card__title
+								.product-card__label
+									.product-card__brand Jour d’Hermes
+									.product-card__name Kelly Calèche
+									.product-card__rate
+										ul.stars__list
+											li.stars__item
+											li.stars__item
+											li.stars__item
+											li.stars__item
+								.product-card__price 1 680
+									span.product-card__currency руб.
+							.product-card__text
+								p.product-card__paragraph Популярный и известный французский бренд  парфюмерии Hermes выпустил в 2012 году новый аромат, который предназначен для чувственных и очаровательных леди – Hermes Jour d'Hermes («Гермес. День от Гермес»). Композиция  относится к группе цветочных запахов,  ее разработкой занимался   известный мастер-парфюмер Jean-Claude Ellena. 
+								p.product-card__paragraph Аромат  обладает легким  звучанием, это жизнерадостный, солнечный и освежающий, в тоже время соблазнительный и  женственный.
+							.order
+								.order__title Выберите объем:
+								form.order__form
+									select(name="volume").order__select
+										option(value="30") 30 мл.
+										option(value="75") 75 мл.
+										option(value="125") 125 мл.
+									button.order__button.order__button_order Заказать пробник
+									button.order__button.order__button_cart В корзину
+							.product-card__tabs
+								ul.tabs__nav
+									li.tabs__item
+										a(href="#tab-1").tabs__link Описание
+									li.tabs__item
+										a(href="#tab-2").tabs__link Отзывы
+								.tabs__text#tab-1 Немного текста для первого таба
+								.tabs__text#tab-2 А тут второй таб

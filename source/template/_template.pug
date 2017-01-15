@@ -20,6 +20,8 @@ html
     script(src='/assets/js/plugins/jquery-ui.min.js' defer)
     script(src='/assets/js/app.js' defer)
 
+    block scripts
+    
     <!--[if lt IE 9]>
     script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
@@ -29,8 +31,7 @@ html
         .maincontent
             include common/_header
             include common/_nav
-            include common/_breadcrumbs
-            
+                        
             block content
 
         .empty

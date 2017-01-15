@@ -7,6 +7,7 @@
 }
 .main-content {
 	@extend %clearfix;
+	padding-bottom: 50px;
 }
 .content {
 	width: 920px;
@@ -160,8 +161,12 @@
 	margin-right: 5px;
 }
 .pagination__link {
-	&:hover .pagination__mark {
-		background-color: $main-color;
+	transition: 0.3s;
+	&:hover {
+		color: $main-color;
+		.pagination__mark {
+			background-color: $main-color;
+		}
 	}
 }
 .pagination__item_next {
