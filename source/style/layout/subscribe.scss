@@ -1,0 +1,37 @@
+.subscribe {
+	padding-bottom: 40px;
+}
+.block-title__bottom {
+	font: 400 14px 'Open Sans';
+	display: inline-block;
+}
+.subscribe__form {
+	text-align: center;
+	font-size: 0;
+}
+.subscribe__input {
+	width: 270px;
+	height: 42px;
+	outline: none;
+	border-bottom: 1px solid #d8d8d8;
+	border-top: 1px solid #d8d8d8;
+	border-left: 1px solid #d8d8d8;
+	border-right: none;
+	font: 400 12px 'Open Sans';
+	color: #888;
+	padding-left: 15px;
+}
+.subscribe__submit {
+	width: 120px;
+	height: 42px;
+	border-bottom: 1px solid #d8d8d8;
+	border-top: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	border-left: none;
+	background-color: $main-color;
+	outline: none;
+	font: 400 12px 'Open Sans';
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}

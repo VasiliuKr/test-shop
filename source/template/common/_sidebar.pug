@@ -26,7 +26,7 @@
 				.filter__title Аромат
 				.filter__content
 					ul.filter__choose
-						- var items = ['Пряный', 'Свежий', 'Цитрус', 'Специи', 'Цветочный', 'Фруктовый']
+						- var items = ['Пряный', 'Свежий', 'Цитрус', 'Специи', 'Цветочный', 'Фруктовый', 'Пряный', 'Свежий', 'Цитрус', 'Специи', 'Цветочный', 'Фруктовый']
 						each item, index in items
 							li.filter__choose-item
 								input(name="" type="checkbox" id="checkbox_" + (index+7)).filter__choose-input
@@ -38,11 +38,11 @@
 				.filter__title Бренд
 				.filter__content
 					ul.filter__choose
-						- var items = ['Acca Cappa', 'Baldi', 'Celine Dion', 'Dolce & Gabbana', 'Fendi', 'Hugo Boss']
+						- var items = ['Acca Cappa', 'Baldi', 'Celine Dion', 'Dolce & Gabbana', 'Fendi', 'Hugo Boss', 'Acca Cappa', 'Baldi', 'Celine Dion', 'Dolce & Gabbana', 'Fendi', 'Hugo Boss']
 						each item, index in items
 							li.filter__choose-item
-								input(name="" type="checkbox" id="checkbox_" + (index+13)).filter__choose-input
-								label(for="checkbox_" + (index+13)).filter__choose-label= item
+								input(name="" type="checkbox" id="checkbox_" + (index+19)).filter__choose-input
+								label(for="checkbox_" + (index+19)).filter__choose-label= item
 					a(href="#").filter__more
 						span.filter__more-text Все бренды
 						i.icon.icon-arrow-down

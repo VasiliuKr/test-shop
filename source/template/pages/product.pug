@@ -6,6 +6,8 @@ block variables
 block scripts
 	script(src='/assets/js/jquery.fancybox.js' defer)
 	script(src='/assets/js/fancybox.js' defer)
+	script(src='/assets/js/lightslider.min.js' defer)
+	script(src='/assets/js/products_slider.js' defer)
 
 block content
 	.breadcrumbs
@@ -25,28 +27,29 @@ block content
 					.column.column_left
 						.product-card__image
 							.product-card__image-inner
-								img(src="assets/img/product_large.jpg").product-card__pic
+								a(href="assets/img/product_large.jpg" class="fancybox" title="Jour d’Hermes")
+									img(src="assets/img/product_large.jpg").product-card__pic
 						ul.gallery__list
 							li.gallery__item
-								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+								a(href="#" class="gallery__link")
 									.transparent-layer
 										.icon-search
-									img(src="assets/img/product_small.jpg").fancybox__small
+									img(src="assets/img/product_large.jpg").fancybox__small
 							li.gallery__item
-								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+								a(href="#" class="gallery__link")
 									.transparent-layer
 										.icon-search
-									img(src="assets/img/product_small.jpg").fancybox__small
+									img(src="assets/img/gucci.jpg").fancybox__small
 							li.gallery__item
-								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+								a(href="#" class="gallery__link")
 									.transparent-layer
 										.icon-search
-									img(src="assets/img/product_small.jpg").fancybox__small
+									img(src="assets/img/kenzo_large.jpg").fancybox__small
 							li.gallery__item
-								a(href="assets/img/product_large.jpg" class="fancybox" rel="gallery" title="Jour d’Hermes")
+								a(href="#" class="gallery__link")
 									.transparent-layer
 										.icon-search
-									img(src="assets/img/product_small.jpg").fancybox__small
+									img(src="assets/img/lacoste.jpg").fancybox__small
 					.column.column_right
 						.product-card__info
 							.product-card__title
@@ -71,13 +74,26 @@ block content
 										option(value="30") 30 мл.
 										option(value="75") 75 мл.
 										option(value="125") 125 мл.
-									button.order__button.order__button_order Заказать пробник
-									button.order__button.order__button_cart В корзину
+									button(type="button").order__button.order__button_order Заказать пробник
+									button(type="button").order__button.order__button_cart В корзину
 							.product-card__tabs
 								ul.tabs__nav
 									li.tabs__item
 										a(href="#tab-1").tabs__link Описание
 									li.tabs__item
 										a(href="#tab-2").tabs__link Отзывы
-								.tabs__text#tab-1 Немного текста для первого таба
-								.tabs__text#tab-2 А тут второй таб
+								.tabs__text#tab-1
+									p.tabs__key Бренд  .................. 
+										span.tabs__value Hermes
+									p.tabs__key Бренд  .................. 
+										span.tabs__value Hermes
+									p.tabs__key Бренд  .................. 
+										span.tabs__value Hermes
+									p.tabs__key Бренд  .................. 
+										span.tabs__value Hermes
+									p.tabs__key Бренд  .................. 
+										span.tabs__value Hermes
+								.tabs__text#tab-2 А тут какой-то отзыв
+			include ../common/_advised_products
+			include ../common/_popularbrands
+			include ../common/_subscribe

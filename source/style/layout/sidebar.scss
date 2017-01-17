@@ -21,6 +21,10 @@
 			background-position: center center;
 			background-color: $main-color;
 		}
+		
+	}
+	.filter__title {
+		border-bottom: 1px solid #fff;
 	}
 }
 .filter__title {
@@ -44,6 +48,9 @@
 }
 .filter__choose-item {
 	margin-bottom: 10px;
+	&.inactive {
+		display: none;
+	}
 }
 .filter__choose-input {
 	& + .filter__choose-label {
@@ -77,6 +84,11 @@
 	color: #888;
 	display: block;
 	padding-bottom: 8px;
+	&.active {
+		.icon {
+			transform: rotate(180deg);
+		}
+	}
 }
 .filter__more-text {
 	border-bottom: 1px dotted #888;

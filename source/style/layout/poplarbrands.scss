@@ -1,0 +1,41 @@
+.popular-brands {
+	padding-bottom: 40px;
+}
+.popular-brands__slider {
+	position: relative;
+}
+.brands__list {
+	text-align: justify;
+	&:after {
+		content: "";
+		width: 100%;
+		display: inline-block;
+	}
+}
+.brands__item {
+	display: inline-block;
+	text-align: center;
+}
+
+.small-controls__btn {
+	position: absolute;
+	top: 13%;
+	width: 13px;
+	height: 23px;
+	border: none;
+	outline: none;
+	background-color: #f7f6f6;
+	opacity: 0.4;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.small-controls__btn_prev {
+	left: -63px;
+	background-image: url("../img/gray-btn_prev.png");
+}
+.small-controls__btn_next {
+	right: -63px;
+	background-image: url("../img/gray-btn_next.png");
+}

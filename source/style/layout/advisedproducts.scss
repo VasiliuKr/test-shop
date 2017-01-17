@@ -1,0 +1,28 @@
+.advised-products {
+	padding-bottom: 40px;
+}
+.advised-products__slider {
+	position: relative;
+}
+.controls__btn {
+	position: absolute;
+	top: 43%;
+	width: 25px;
+	height: 43px;
+	border: none;
+	outline: none;
+	background-color: #f7f6f6;
+	opacity: 0.4;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.controls__btn_prev {
+	left: -75px;
+	background-image: url("../img/bnt-prev.png");
+}
+.controls__btn_next {
+	right: -75px;
+	background-image: url("../img/bnt-next.png");
+}

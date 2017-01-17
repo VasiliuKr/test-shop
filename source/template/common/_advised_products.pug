@@ -1,0 +1,18 @@
+.advised-products
+	.container
+		.block-title Рекомендуемые вам товары
+		.advised-products__slider
+			ul.products__list#products__slider
+				- for (var i = 0; i < 8; i++)
+					li.products__item
+						a(href="product.html").products__link
+							.products__item-inner
+								.products__img-wrapper
+									img(src="assets/img/product.jpg").products__img
+								.products__brand Jour D'hermes
+								.products__name Kelly Calèche
+								.products__price 1 680 
+									span.products__price-currency руб.
+								button(type="button").products__button В корзину
+			button(type="button").controls__btn.controls__btn_prev
+			button(type="button").controls__btn.controls__btn_next
